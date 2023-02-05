@@ -10,7 +10,7 @@ hour=$(date "+%H")
 url=`curl -s 'https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/60_24' | jq -r '.channel_item[].service_url'`
 
 if [[ ! "$url" =~ ".m3u8" ]];then
-	_error "Failed to fetch a url."	
+	_error "Failed to fetch a url."
 fi
 
 if [ -n "$1" -a -d "$1" ];then
@@ -27,7 +27,7 @@ if [ -n "$1" -a -d "$1" ];then
 	elif [ $hour -eq 22 ];then
 		title="당신의밤과음악"
 		duration=02:00:00
-	elif [ $hour -eq 24 ];then
+	elif [ $hour -eq 0 ];then
 		title="JAZZ수첩"
 		duration=01:00:00
 	elif [ $hour -eq 18 ];then
