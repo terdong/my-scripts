@@ -27,7 +27,7 @@ if [ -n "$1" -a -d "$1" ];then
 	elif [ $hour -eq 22 ];then
 		title="당신의밤과음악"
 		duration=02:00:00
-	elif [ $hour -eq 0 ];then
+	elif [ $hour -eq 00 ];then
 		title="JAZZ수첩"
 		duration=01:00:00
 	elif [ $hour -eq 18 ];then
